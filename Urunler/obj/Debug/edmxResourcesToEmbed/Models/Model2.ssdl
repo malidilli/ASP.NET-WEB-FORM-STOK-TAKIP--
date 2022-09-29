@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kullanıcıgirisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'kullanıcıgiris.dbo.KULLANICILAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="KULLANICILAR">
+    <Key>
+      <PropertyRef Name="ıd" />
+    </Key>
+    <Property Name="ıd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KULLANICIADI" Type="varchar" MaxLength="50" />
+    <Property Name="SİFRE" Type="varchar" MaxLength="50" />
+    <Property Name="TARİH" Type="date" />
+  </EntityType>
+  <EntityContainer Name="kullanıcıgirisModelStoreContainer">
+    <EntitySet Name="KULLANICILAR" EntityType="Self.KULLANICILAR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[KULLANICILAR].[ıd] AS [ıd], 
+[KULLANICILAR].[KULLANICIADI] AS [KULLANICIADI], 
+[KULLANICILAR].[SİFRE] AS [SİFRE], 
+[KULLANICILAR].[TARİH] AS [TARİH]
+FROM [dbo].[KULLANICILAR] AS [KULLANICILAR]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

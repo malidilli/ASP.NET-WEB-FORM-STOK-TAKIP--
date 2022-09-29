@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KullanıcıdbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Kullanıcıdb.dbo.Üyeler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Üyeler">
+          <Key>
+            <PropertyRef Name="ıd" />
+          </Key>
+          <Property Name="ıd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullanıcıAD" Type="nvarchar(max)" />
+          <Property Name="SİFRE" Type="nvarchar(max)" />
+          <Property Name="ADSoyad" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="KullanıcıdbModel1StoreContainer">
+          <EntitySet Name="Üyeler" EntityType="Self.Üyeler" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Üyeler].[ıd] AS [ıd], 
+[Üyeler].[KullanıcıAD] AS [KullanıcıAD], 
+[Üyeler].[SİFRE] AS [SİFRE], 
+[Üyeler].[ADSoyad] AS [ADSoyad]
+FROM [dbo].[Üyeler] AS [Üyeler]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KullanıcıdbModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Üyeler">
+          <Key>
+            <PropertyRef Name="ıd" />
+          </Key>
+          <Property Name="ıd" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullanıcıAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SİFRE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ADSoyad" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="KullanıcıdbEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Üyeler" EntityType="Self.Üyeler" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KullanıcıdbModel1StoreContainer" CdmEntityContainer="KullanıcıdbEntities1">
+          <EntitySetMapping Name="Üyeler">
+            <EntityTypeMapping TypeName="KullanıcıdbModel1.Üyeler">
+              <MappingFragment StoreEntitySet="Üyeler">
+                <ScalarProperty Name="ıd" ColumnName="ıd" />
+                <ScalarProperty Name="KullanıcıAD" ColumnName="KullanıcıAD" />
+                <ScalarProperty Name="SİFRE" ColumnName="SİFRE" />
+                <ScalarProperty Name="ADSoyad" ColumnName="ADSoyad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

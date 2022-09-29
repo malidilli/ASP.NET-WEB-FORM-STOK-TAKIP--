@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kullanıcıgirisModelStoreContainer" CdmEntityContainer="kullanıcıgirisEntities">
+    <EntitySetMapping Name="KULLANICILAR">
+      <EntityTypeMapping TypeName="kullanıcıgirisModel.KULLANICILAR">
+        <MappingFragment StoreEntitySet="KULLANICILAR">
+          <ScalarProperty Name="ıd" ColumnName="ıd" />
+          <ScalarProperty Name="KULLANICIADI" ColumnName="KULLANICIADI" />
+          <ScalarProperty Name="SİFRE" ColumnName="SİFRE" />
+          <ScalarProperty Name="TARİH" ColumnName="TARİH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

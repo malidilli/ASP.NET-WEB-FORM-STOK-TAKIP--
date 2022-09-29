@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KullanıcıdbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Kullanıcıdb.dbo.Üyeler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Üyeler">
+    <Key>
+      <PropertyRef Name="ıd" />
+    </Key>
+    <Property Name="ıd" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullanıcıAD" Type="nvarchar(max)" />
+    <Property Name="SİFRE" Type="nvarchar(max)" />
+    <Property Name="ADSoyad" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="KullanıcıdbModel1StoreContainer">
+    <EntitySet Name="Üyeler" EntityType="Self.Üyeler" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Üyeler].[ıd] AS [ıd], 
+[Üyeler].[KullanıcıAD] AS [KullanıcıAD], 
+[Üyeler].[SİFRE] AS [SİFRE], 
+[Üyeler].[ADSoyad] AS [ADSoyad]
+FROM [dbo].[Üyeler] AS [Üyeler]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
